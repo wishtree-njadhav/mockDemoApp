@@ -1,0 +1,47 @@
+<div class="container">
+    <form [formGroup]="loginForm"
+    (ngSubmit)="onSubmit(loginForm.value)">
+    <h3>Login</h3>
+        <div>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Enter email"  formControlName="email" />
+              </mat-form-field>
+              
+        </div>
+        <div *ngFor="let validation of emailErrorMessage.email">
+            <mat-error
+              *ngIf="
+              loginForm.get('email').hasError(validation.type) &&
+                (loginForm.get('email').dirty ||
+                loginForm.get('email').touched)
+              "
+              style="color: red"
+            >
+              {{ validation.message }}
+            </mat-error>
+          </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Enter password"  formControlName="password"/>
+              </mat-form-field>
+        </div>
+        <div *ngFor="let validation of passwordErrorMessage.password">
+            <mat-error
+              *ngIf="
+              loginForm.get('password').hasError(validation.type) &&
+                (loginForm.get('password').dirty ||
+                loginForm.get('password').touched)
+              "
+              style="color: red"
+            >
+              {{ validation.message }}
+            </mat-error>
+          </div>
+        <div>
+      <button mat-raised-button type="submit" color="accent" [disabled]="loginForm.invalid">Submit</button>
+
+        </div>
+    </form>
+</div>
