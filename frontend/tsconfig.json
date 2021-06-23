@@ -8,6 +8,20 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "paths": {
+      "lib-mock": [
+        "dist/lib-mock/lib-mock",
+        "dist/lib-mock"
+      ],
+      "mock-lib": [
+        "dist/mock-lib/mock-lib",
+        "dist/mock-lib"
+      ],
+      "mock-library": [
+        "dist/mock-library/mock-library",
+        "dist/mock-library"
+      ]
+    },
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",

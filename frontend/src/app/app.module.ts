@@ -20,6 +20,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
+import { LibMockModule } from 'lib-mock';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +47,8 @@ import { RouterModule } from '@angular/router';
     MatRadioModule,
     MatCheckboxModule,
     MatListModule,
+    LibMockModule
+
 
   ],
   providers: [MatDatepickerModule,  ],

@@ -141,6 +141,126 @@
           }
         }
       }
+    },
+    "mock-lib": {
+      "projectType": "library",
+      "root": "projects/mock-lib",
+      "sourceRoot": "projects/mock-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/mock-lib/tsconfig.lib.json",
+            "project": "projects/mock-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mock-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mock-lib/src/test.ts",
+            "tsConfig": "projects/mock-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/mock-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mock-lib/tsconfig.lib.json",
+              "projects/mock-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "mock-library": {
+      "projectType": "library",
+      "root": "projects/mock-library",
+      "sourceRoot": "projects/mock-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/mock-library/tsconfig.lib.json",
+            "project": "projects/mock-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mock-library/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mock-library/src/test.ts",
+            "tsConfig": "projects/mock-library/tsconfig.spec.json",
+            "karmaConfig": "projects/mock-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mock-library/tsconfig.lib.json",
+              "projects/mock-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "lib-mock": {
+      "projectType": "library",
+      "root": "projects/lib-mock",
+      "sourceRoot": "projects/lib-mock/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/lib-mock/tsconfig.lib.json",
+            "project": "projects/lib-mock/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-mock/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-mock/src/test.ts",
+            "tsConfig": "projects/lib-mock/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-mock/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-mock/tsconfig.lib.json",
+              "projects/lib-mock/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "covidvaccinebookingapp"
